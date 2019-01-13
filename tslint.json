@@ -27,10 +27,23 @@
                 ]
             }
         ],
-        "only-arrow-functions": [false],
+        "only-arrow-functions": {
+            "options": ["allow-declarations", "allow-named-functions"]
+        },
         "no-inferrable-types": true,
         "no-magic-numbers": [true, -1, 0, 1],
         "no-parameter-reassignment": true,
+        "no-shadowed-variable": [true,
+            {
+                "class": true,
+                "enum": true,
+                "function": false,
+                "interface": false,
+                "namespace": true,
+                "typeAlias": false,
+                "typeParameter": false
+            }
+        ],
         "no-var-requires": false,
         "promise-function-async": true,
         "quotemark": [true, "single"],

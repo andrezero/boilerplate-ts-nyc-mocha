@@ -12,12 +12,12 @@ chai.use(chaiAsPromised);
 
 const foo = require('../src/module');
 
-describe('foo', function () {
-  it('should be a function', function   () {
+describe('foo', function t () {
+  it('should be a function', function t () {
     expect(foo).to.be.a('function');
   });
 
-  it('should return a number', function () {
+  it('should return a number', function t () {
     expect(foo()).to.be.a('number');
   });
 });
