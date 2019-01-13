@@ -1,0 +1,47 @@
+{
+  "name": "boilerplate-ts-nyc-mocha",
+  "version": "0.0.1",
+  "description": "Node.js boilerplate - Typescript + mocha tests + nyc coverage",
+  "license": "MIT",
+  "homepage": "https://github.com/andrezero/boilerplate-ts-nyc-mocha",
+  "author": "Andre Torgal <andre.torgal@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andrezero/boilerplate-ts-nyc-mocha.git"
+  },
+  "scripts": {
+    "dev": "_mocha --require ts-node/register --watch-extensions ts --watch --recursive src/**/*.spec.* test/**/*.spec.*",
+    "lint": "eslint src/ test/ && tslint src/**/*.ts test/**/*.ts",
+    "lint-fix": "eslint --fix src/ test/",
+    "test": "npm run test-u && npm run test-i",
+    "test-u": "nyc _mocha --require ts-node/register --recursive src/**/*.spec.*",
+    "test-i": "nyc _mocha --require ts-node/register --recursive test/**/*.spec.*",
+    "coverage": "http-server coverage/",
+    "clean": "rm -rf .nyc_output coverage build",
+    "build": "npm run clean; npm run lint && npm run test",
+    "pub": "git push && npm run build && npm-bump patch"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/chai": "^4.1.7",
+    "@types/mocha": "^5.2.5",
+    "@types/node": "^10.12.18",
+    "@types/sinon-chai": "^3.2.2",
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
+    "eslint": "^4.10.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "http-server": "^0.11.1",
+    "mocha": "^5.2.0",
+    "nyc": "^13.1.0",
+    "sinon": "^7.2.2",
+    "sinon-chai": "^3.3.0",
+    "ts-node": "^7.0.1",
+    "tslint": "^5.12.1",
+    "typescript": "^3.2.2"
+  }
+}

@@ -1,0 +1,49 @@
+{
+    "defaultSeverity": "error",
+    "extends": [
+        "tslint:recommended"
+    ],
+    "jsRules": {},
+    "rules": {
+        "adjacent-overload-signatures": true,
+        "ban-ts-ignore": false,
+        "member-ordering": [
+            true,
+            {
+                "order": [
+                    "constructor",
+                    "public-static-field",
+                    "public-static-method",
+                    "protected-static-field",
+                    "protected-static-method",
+                    "private-static-field",
+                    "private-static-method",
+                    "public-instance-field",
+                    "public-instance-method",
+                    "protected-instance-field",
+                    "protected-instance-method",
+                    "private-instance-field",
+                    "private-instance-method"
+                ]
+            }
+        ],
+        "only-arrow-functions": [false],
+        "no-inferrable-types": true,
+        "no-magic-numbers": [true, -1, 0, 1],
+        "no-parameter-reassignment": true,
+        "no-var-requires": false,
+        "promise-function-async": true,
+        "quotemark": [true, "single"],
+        "space-before-function-paren": true,
+        "typedef": [true,
+            "parameter",
+            "arrow-parameter",
+            "property-declaration",
+            "member-variable-declaration",
+            "object-destructuring",
+            "array-destructuring"
+        ],
+        "unified-signatures": true
+    },
+    "rulesDirectory": []
+}
