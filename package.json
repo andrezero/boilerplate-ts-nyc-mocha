@@ -12,11 +12,11 @@
   "scripts": {
     "dev": "_mocha --require ts-node/register --watch-extensions ts --watch --recursive src/**/*.spec.* test/**/*.spec.*",
     "lint": "eslint src/ test/ && tslint src/**/*.ts test/**/*.ts",
-    "lint-fix": "eslint --fix src/ test/",
+    "lint-fix": "eslint --fix src/ test/ && tslint --fix src/**/*.ts test/**/*.ts",
     "test": "npm run test-u && npm run test-i",
     "test-u": "nyc _mocha --require ts-node/register --recursive src/**/*.spec.*",
     "test-i": "nyc _mocha --require ts-node/register --recursive test/**/*.spec.*",
-    "coverage": "http-server coverage/",
+    "coverage": "node_modules/.bin/http-server coverage/",
     "clean": "rm -rf .nyc_output coverage build",
     "build": "npm run clean; npm run lint && npm run test",
     "pub": "git push && npm run build && npm-bump patch"
