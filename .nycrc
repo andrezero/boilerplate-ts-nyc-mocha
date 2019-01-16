@@ -10,6 +10,9 @@
     "src/**/*.js",
     "src/**/*.ts"
   ],
+  "exclude": [
+    "src/**/*.spec.*"
+  ],
   "require": [
     "ts-node/register"
   ],

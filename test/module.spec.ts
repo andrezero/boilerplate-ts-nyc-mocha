@@ -1,14 +1,13 @@
-'use strict';
-
 import * as chai from 'chai';
-import * as mocha from 'mocha';
-import * as sinon from 'sinon';
-const expect = chai.expect;
+import chaiAsPromised from 'chai-as-promised';
+import 'mocha';
+import 'sinon';
+import sinonChai from 'sinon-chai';
 
-const sinonChai = require('sinon-chai');
-const chaiAsPromised = require('chai-as-promised');
+const expect = chai.expect;
 chai.use(sinonChai);
 chai.use(chaiAsPromised);
+chai.use(sinonChai);
 
 const foo = require('../src/module');
 
